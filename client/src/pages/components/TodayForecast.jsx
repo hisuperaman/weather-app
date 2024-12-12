@@ -22,7 +22,8 @@ function TodayForecast({ forecastDay }) {
     const filteredForecastDay = forecastDay.filter((hour, index) => {
         const currentDate = new Date();
         const targetDate = new Date(hour.time);
-        return ((index) % 3) == 0 && targetDate >= currentDate
+        console.log(currentDate.getHours(), targetDate.getHours())
+        return targetDate.getHours() >= currentDate.getHours()
     })
 
     return (
