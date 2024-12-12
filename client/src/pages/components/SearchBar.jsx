@@ -72,7 +72,7 @@ function SearchBar({ onResultItemClick }) {
                 <input ref={searchInputRef} type="text" onChange={(e) => debouncedSearch(e.target.value)} defaultValue={''} placeholder="Search for cities" className="border-none outline-none focus:ring-0 focus:border-transparent w-full bg-inherit p-[0.7rem] dark:text-dark-textActive text-light-textActive" />
             </div>
 
-            <div ref={suggestionsRef} className={`${cities.length > 0 ? 'flex' : 'hidden'} absolute top-12 w-3/4 flex-col dark:bg-dark-primary bg-light-primary rounded-small p-[0.7rem]`}>
+            <div ref={suggestionsRef} className={`${cities.length > 0 ? 'flex' : 'hidden'} absolute top-12 w-full flex-col dark:bg-dark-primary bg-light-primary rounded-small p-[0.7rem]`}>
                 {
                     cities.map((city, index) => {
                         return (
