@@ -53,7 +53,7 @@ export default function HomePageSkeleton() {
                 </div>
             </div>
 
-            <div className="flex-1 lg:mt-20 h-[700px] min-w-[400px] sm:min-w-[360px]">
+            <div className="flex-1 lg:mt-20 h-[700px] min-w-full sm:min-w-[360px]">
                 <SevenDayForecastSkeleton />
             </div>
         </>

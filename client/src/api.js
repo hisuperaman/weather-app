@@ -22,6 +22,16 @@ export const fetchWeatherData = async () => {
     return response.json();
 }
 
+export const fetchWeatherDataByCoordinates = async (lat, lon) => {
+    const response = await fetch(`${config.serverURL}/forecast_weather?q=${lat},${lon}`, {
+        method: 'get'
+    })
+    if(!response.ok) {
+        throw new Error('Error fetching weather data')
+    }
+    return response.json();
+}
+
 export const fetchWeatherDataById = async (id) => {
     const response = await fetch(`${config.serverURL}/forecast_weather?q=id:${id}`, {
         method: 'get'
