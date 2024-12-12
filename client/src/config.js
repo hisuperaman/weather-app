@@ -1,3 +1,3 @@
 export default {
-    serverURL: 'http://localhost:8000'
+    serverURL: 'https://weather-app-web.onrender.com'
 }
